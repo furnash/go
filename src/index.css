@@ -1,0 +1,209 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Cosmic Color System */
+    --background: 246 244 250; /* Cosmic Mist #F6F4FA */
+    --foreground: 235 42 8%; /* Cosmic Indigo #2B2A6A */
+
+    --card: 0 0% 100%; /* Pure White */
+    --card-foreground: 235 42 8%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 235 42 8%;
+
+    --primary: 235 42 8%; /* Cosmic Indigo #2B2A6A */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 260 50 33%; /* Deep Violet #512B81 */
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 246 244 250;
+    --muted-foreground: 235 42 40%;
+
+    --accent: 304 48 65%; /* Neon Magenta #A63BA6 */
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 235 42 88%;
+    --input: 235 42 92%;
+    --ring: 304 48 65%;
+
+    --radius: 0.75rem;
+
+    /* Cosmic Theme Colors */
+    --cosmic-indigo: 235 42 8%; /* #2B2A6A */
+    --deep-violet: 260 50 33%; /* #512B81 */
+    --neon-magenta: 304 48 65%; /* #A63BA6 */
+    --solar-orange: 24 100 62%; /* #FF8A3D */
+    --golden-sun: 45 88 60%; /* #F4B942 */
+    --midnight: 235 83 11%; /* #0E0F2A */
+    --cosmic-mist: 246 244 250; /* #F6F4FA */
+
+    /* Gradients */
+    --gradient-cosmic: linear-gradient(135deg, hsl(var(--deep-violet)), hsl(var(--neon-magenta)), hsl(var(--solar-orange)));
+    --gradient-hero: linear-gradient(180deg, hsl(var(--midnight) / 0.4), hsl(var(--deep-violet) / 0.6));
+    --gradient-card: linear-gradient(135deg, hsl(var(--deep-violet) / 0.1), hsl(var(--neon-magenta) / 0.1));
+
+    /* Shadows */
+    --shadow-cosmic: 0 25px 50px -12px hsl(var(--deep-violet) / 0.25);
+    --shadow-neon: 0 0 30px hsl(var(--neon-magenta) / 0.3);
+    --shadow-glow: 0 0 40px hsl(var(--solar-orange) / 0.4);
+
+    /* Animations */
+    --transition-cosmic: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 235 83 11%; /* Midnight #0E0F2A */
+    --foreground: 0 0% 100%;
+
+    --card: 260 50 15%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 235 83 11%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 304 48 65%; /* Neon Magenta */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 260 50 25%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 260 50 20%;
+    --muted-foreground: 246 244 200%;
+
+    --accent: 24 100 62%; /* Solar Orange */
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 260 50 25%;
+    --input: 260 50 20%;
+    --ring: 304 48 65%;
+
+    /* Dark mode cosmic colors */
+    --cosmic-indigo: 235 42 20%;
+    --deep-violet: 260 50 25%;
+    --cosmic-mist: 235 83 15%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+  }
+
+  /* Smooth scrolling for anchor links */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Custom utilities */
+  .font-display {
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  .font-body {
+    font-family: 'Inter', sans-serif;
+  }
+
+  .gradient-cosmic {
+    background: var(--gradient-cosmic);
+  }
+
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .gradient-card {
+    background: var(--gradient-card);
+  }
+
+  .shadow-cosmic {
+    box-shadow: var(--shadow-cosmic);
+  }
+
+  .shadow-neon {
+    box-shadow: var(--shadow-neon);
+  }
+
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .text-cosmic-indigo {
+    color: hsl(var(--cosmic-indigo));
+  }
+
+  .text-neon-magenta {
+    color: hsl(var(--neon-magenta));
+  }
+
+  .text-solar-orange {
+    color: hsl(var(--solar-orange));
+  }
+
+  .text-golden-sun {
+    color: hsl(var(--golden-sun));
+  }
+
+  .bg-cosmic-indigo {
+    background-color: hsl(var(--cosmic-indigo));
+  }
+
+  .bg-deep-violet {
+    background-color: hsl(var(--deep-violet));
+  }
+
+  .bg-neon-magenta {
+    background-color: hsl(var(--neon-magenta));
+  }
+
+  .bg-solar-orange {
+    background-color: hsl(var(--solar-orange));
+  }
+
+  .bg-golden-sun {
+    background-color: hsl(var(--golden-sun));
+  }
+
+  .bg-midnight {
+    background-color: hsl(var(--midnight));
+  }
+
+  .bg-cosmic-mist {
+    background-color: hsl(var(--cosmic-mist));
+  }
+}

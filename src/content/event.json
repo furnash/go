@@ -1,0 +1,105 @@
+{
+  "title": "Groove Odyssey 2.0",
+  "organizer": "DanceInspire",
+  "date": "2025-09-13",
+  "time": "17:00",
+  "timezone": "Asia/Colombo",
+  "venue": {
+    "name": "Hillwood College Auditorium",
+    "city": "Kandy", 
+    "address": "Hillwood College, Kandy, Sri Lanka",
+    "mapsUrl": "https://maps.app.goo.gl/TZbVjzaUWGi6KDEY9"
+  },
+  "tickets": [
+    { 
+      "id": "balcony", 
+      "name": "Balcony", 
+      "price": 2500, 
+      "currency": "LKR",
+      "image": "/src/assets/balcony-ticket.jpg"
+    },
+    { 
+      "id": "ground", 
+      "name": "Ground",  
+      "price": 3500, 
+      "currency": "LKR",
+      "image": "/src/assets/ground-ticket.jpg"
+    }
+  ],
+  "ticketLocations": [
+    {
+      "name": "DanceInspire Studio & Academy",
+      "url": "https://maps.app.goo.gl/167hGcMc6oMydQNu6"
+    },
+    {
+      "name": "Banda Boot Works", 
+      "url": "https://maps.app.goo.gl/o3jFoPu2rekXbgNb7"
+    }
+  ],
+  "reservationPhone": "0772024899",
+  "reservationContact": "Shenal",
+  "contacts": [
+    { "name": "Shenal", "phone": "0772024899" }
+  ],
+  "social": { 
+    "instagram": "https://www.instagram.com/danceinspirelk",
+    "facebook": "https://www.facebook.com/danceinspirelk/",
+    "youtube": "https://www.youtube.com/channel/UCeLJZ6gjRW2JLx_S4vxWqkw"
+  },
+  "about": {
+    "description": "Groove Odyssey 2.0, taking place on Saturday, 13th September 2025 at the Hillwood College Auditorium in Kandy, is the much-anticipated return of DanceInspire's signature concert. With seating for 800+ guests, the evening will feature over 200 talented performers in a dynamic showcase of creativity, cultural diversity, and artistic excellence.",
+    "highlight": "Combining high-energy choreography, captivating storytelling, and professional stage production, Groove Odyssey 2.0 promises an unforgettable night that will inspire audiences and celebrate the transformative power of dance",
+    "highlights": [
+      {
+        "title": "150+ Performers",
+        "description": "Showcasing the talent and dedication of our diverse DanceInspire community."
+      },
+      {
+        "title": "Diversity in Performance", 
+        "description": "Brand-new choreography featuring a wide mix of styles and cultures, with performers as young as 4 years old taking the stage alongside experienced dancers."
+      },
+      {
+        "title": "Special Guest Performances",
+        "description": "Featuring appearances from celebrated artists & dancers."
+      },
+      {
+        "title": "The Perfect Stage",
+        "description": "In the heart of Kandy, the new Hillwood College Auditorium is fully air-conditioned and offers a premium experience for both performers and audiences."
+      },
+      {
+        "title": "LED Stage Design",
+        "description": "A fully equipped stage with high-definition LED displays, dynamic lighting, and immersive visuals."
+      },
+      {
+        "title": "Guaranteed Audience",
+        "description": "With four parent passes allocated per participant, Groove Odyssey 2.0 secures an audience of over 800."
+      }
+    ]
+  },
+  "founder": {
+    "name": "Denathi Pussegoda",
+    "bio": "The founder of DanceInspire, Denathi Pussegoda, is a dancer and choreographer with formal training in both Kandyan and Bharathanatyam dance, having completed prestigious graduations in each. Her contributions to the performing arts were recognized at the 4th New Generation Awards (2023), where she was honored for her impact on culture and the arts. Always seeking growth, Denathi embraces every opportunity to learn, whether through workshops or simple classes—so she can bring fresh inspiration and knowledge back to her students. Beyond the studio, Denathi has built a powerful digital presence, becoming one of Sri Lanka's most influential young dance creators. Her dance covers and choreographies have reached global audiences in the millions, with several videos going viral and inspiring dancers worldwide. With her vision, creativity, and influence, Denathi continues to push boundaries, mentor young talent, and position DanceInspire as both a local leader and a rising name on the international stage."
+  },
+  "sponsors": [
+    {
+      "category": "Powered by",
+      "name": "JBL",
+      "logo": "/src/assets/jbl.jpg"
+    },
+    {
+      "category": "Official Apparel Partner",
+      "name": "kelly felder",
+      "logo": "/src/assets/Ke.jpg"  
+    },
+    {
+      "category": "Digital Media Partner",
+      "name": "Media Partner",
+      "logo": "/src/assets/is.jpg"
+    },
+    {
+      "category": "Hospitality Partner", 
+      "name": "oak ray",
+      "logo": "/src/assets/pk.jpg"
+    }
+  ]
+}
