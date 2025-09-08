@@ -5,7 +5,7 @@ import logoShort from '@/assets/logo-short.png';
 import eventData from '@/content/event.json';
 import titleWordmark from '@/assets/2.png';
 import { MapPin, Clock, Calendar } from 'lucide-react';
-import heroVideo from '@/assets/1.mp4';
+import heroVideo from '@/assets/2.mp4';
 import SeamlessVideo from '@/components/SeamlessVideo';
 
 

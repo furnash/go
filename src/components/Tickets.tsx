@@ -43,61 +43,62 @@ const Tickets = () => {
           </div>
 
           {/* Tickets Grid */}
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-16">
-            {eventData.tickets.map((ticket: any) => {
-              const imgSrc = getTicketImage(ticket.name);
-              return (
-                <div
-                  key={ticket.id}
-                  className="relative rounded-3xl overflow-hidden bg-deep-violet/30 backdrop-blur-sm border border-white/10 hover:border-neon-magenta/30 transition-all duration-300 hover:-translate-y-2"
-                >
-                 
-<div className="relative overflow-hidden">
-  {imgSrc ? (
-    <>
-      <img
-        src={imgSrc}
-        alt={`${ticket.name} seating`}
-        className="w-full h-auto object-contain"
-        draggable={false}
-      />
-      <div className="absolute inset-0 bg-gradient-to-t from-midnight/80 to-transparent" />
-    </>
-  ) : (
-    // fallback if no image mapped
-    <div className="w-full bg-gradient-cosmic">
-      <div className="absolute inset-0 bg-gradient-to-t from-midnight/80 to-transparent" />
-    </div>
-  )}
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-16"> 
+  {eventData.tickets.map((ticket: any) => {
+    const imgSrc = getTicketImage(ticket.name);
+    const isGround = ticket.name.toLowerCase().includes("ground"); 
+    return (
+      <div
+        key={ticket.id}
+        className="relative rounded-3xl overflow-hidden bg-deep-violet/30 backdrop-blur-sm border border-white/10 hover:border-neon-magenta/30 transition-all duration-300 hover:-translate-y-2"
+      >
+        <div className="relative overflow-hidden">
+          {imgSrc ? (
+            <>
+              <img
+                src={imgSrc}
+                alt={`${ticket.name} seating`}
+                className="w-full h-auto object-contain"
+                draggable={false}
+              />
 
-  {/* Title overlay */}
-  <div className="absolute inset-0 flex items-center justify-center text-center px-4">
-    <div className="text-white">
-      {/* <h3 className="font-display font-bold text-3xl mb-2">{ticket.name}</h3>
-      <p className="text-lg">Seating</p> */}
-    </div>
-  </div>
+              {/* SOLD OUT overlay for Ground Seating */}
+             {isGround && (
+  <img
+    src="/sold.png"
+    alt="Sold Out"
+    className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[22rem] h-auto pointer-events-none select-none opacity-95"
+  />
+)}
 
-  {/* Price Badge */}
-  <div className="absolute top-4 right-4">
-    <div className="bg-golden-sun text-midnight font-display font-bold px-4 py-2 rounded-full">
-      LKR {ticket.price.toLocaleString()}
-    </div>
-  </div>
+
+              <div className="absolute inset-0 bg-gradient-to-t from-midnight/80 to-transparent" />
+            </>
+          ) : (
+            <div className="w-full bg-gradient-cosmic">
+              <div className="absolute inset-0 bg-gradient-to-t from-midnight/80 to-transparent" />
+            </div>
+          )}
+
+          {/* Price Badge */}
+          <div className="absolute top-4 right-4">
+            <div className="bg-golden-sun text-midnight font-display font-bold px-4 py-2 rounded-full">
+              LKR {ticket.price.toLocaleString()}
+            </div>
+          </div>
+        </div>
+
+        {/* Ticket Content */}
+        <div className="p-6">
+          <h3 className="font-display font-bold text-2xl mb-4 text-center">
+            {ticket.name} Seating
+          </h3>
+        </div>
+      </div>
+    );
+  })}
 </div>
 
-
-
-                  {/* Ticket Content */}
-                  <div className="p-6">
-                    <h3 className="font-display font-bold text-2xl mb-4 text-center">
-                      {ticket.name} Seating
-                    </h3>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
 
           {/* How to Buy Tickets */}
           <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20">
