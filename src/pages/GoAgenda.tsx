@@ -4,7 +4,7 @@ const GoAgenda = () => {
   useEffect(() => {
     const link = document.createElement("a");
     link.href = "/1.pdf"; 
-    link.download = "Groove Odyssey 2.0 – Agenda"; 
+    link.download = "Groove Odyssey 2.0 – Agenda.pdf"; 
     link.click();
 
     window.location.href = "/";
